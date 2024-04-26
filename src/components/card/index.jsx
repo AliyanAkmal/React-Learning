@@ -8,6 +8,9 @@ const Card = ({ data, setbuyCard }) => {
       return [...pre, data];
     });
   };
+  const handleDelete = (data) => {
+    console.log(data);
+  };
   return (
     <>
       <div className="wholeCard">
@@ -46,6 +49,7 @@ const Card = ({ data, setbuyCard }) => {
                 borderRadius: "6px",
                 fontWeight: "bolder",
               }}
+              onClick={() => handleDelete(data)}
             >
               delete
             </button>

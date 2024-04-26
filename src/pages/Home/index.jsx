@@ -8,7 +8,7 @@ import BuyCards from "../../components/cardList/BuyCards";
 
 const HomePage = () => {
   const [buyCard, setbuyCard] = useState([]);
-
+  const [filterBuy, setbfilterBuy] = useState(buyCard);
   return (
     <>
       <Header />
@@ -25,7 +25,11 @@ const HomePage = () => {
               flexWrap: "wrap",
             }}
           >
-            <BuyCards buyCard={buyCard} />
+            <BuyCards
+              buyCard={buyCard}
+              filterBuy={filterBuy}
+              setbfilterBuy={setbfilterBuy}
+            />
           </div>
         </div>
       </WrapperLayout>
